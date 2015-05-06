@@ -1,1 +1,51 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_whileUntil" id="39" inline="false" x="77" y="55">
+    <field name="MODE">WHILE</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="46">
+        <field name="OBJECT">ENTER</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="oled_cleardisplay" id="74">
+        <next>
+          <block type="oled_setcursor" id="83" inline="true">
+            <value name="STARTX">
+              <block type="math_number" id="103">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+            <value name="STARTY">
+              <block type="math_number" id="110">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+            <next>
+              <block type="oled_drawtext" id="142">
+                <field name="TEXT">left=</field>
+                <next>
+                  <block type="oled_drawnumber" id="175" inline="true">
+                    <value name="NUMBER">
+                      <block type="sensor_light" id="156">
+                        <field name="LIGHT">LEFT</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="robot_delay" id="227" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="234">
+                            <field name="NUM">200</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
